@@ -1,6 +1,5 @@
 "use client";
 
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 
 export default function SearchBar({ onSearch }) {
@@ -9,14 +8,13 @@ export default function SearchBar({ onSearch }) {
   const handleSearch = (e) => {
     const value = e.target.value;
     setQuery(value);
-    if (onSearch) onSearch(value); // pass search text to parent
+    if (onSearch) onSearch(value); 
   };
 
   return (
     <header className="flex items-center bg-gray-100 px-4 py-3 shadow gap-3 text-2xl">
       <span> Items : </span>
       <div className="relative w-full  max-w-md">
-        {/* <MagnifyingGlassIcon className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" /> */}
         <input
           type="text"
           value={query}

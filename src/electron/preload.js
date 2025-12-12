@@ -2,9 +2,11 @@ const { contextBridge, ipcRenderer } = require("electron");
 
 contextBridge.exposeInMainWorld("electronAPI", {
   exitApp: () => ipcRenderer.invoke("exit-app"),
-  getProductByBarcode: (barcode) =>
-    ipcRenderer.invoke("get-product-by-barcode", barcode),
-  createLocalTransaction: (payload) =>
-    ipcRenderer.invoke("create-local-transaction", payload),
-  syncNow: () => ipcRenderer.invoke("sync-now"),
+  runSync: () => ipcRenderer.invoke("sync:run"),
+});
+
+contextBridge.exposeInMainWorld("dbAPI", {
+  getProducts: () => ipcRenderer.invoke("get-products"),
+  getProductById: (id) => ipcRenderer.invoke("get-product-by-id", id),
+  syncProducts: (products) => ipcRenderer.invoke("sync-products", products),
 });
