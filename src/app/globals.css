@@ -5,11 +5,21 @@
   --foreground: #171717;
 }
 
+
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --color-dark-pink: #b46a7a;
+  --color-pink: #f59dc2;
+  --color-light-pink: #f5dde4;
+  --color-beige: #e8b99d;
+  --color-platinum: #dde0da;
+  --color-dark-gray: #333333;
+  --color-main-gray: #efe9e3;
 }
 
 @media (prefers-color-scheme: dark) {

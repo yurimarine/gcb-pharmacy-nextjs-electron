@@ -7,8 +7,9 @@ const PHARMACY_ID = 1;
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 1200,
-    height: 800,
+    fullscreen: true,
+    // width: 1200,
+    // height: 800,
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,

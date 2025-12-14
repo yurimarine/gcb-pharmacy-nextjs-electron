@@ -64,24 +64,24 @@ export default function Navbar() {
   }
 
   return (
-    <header className="flex justify-between items-center border-b border-gray-300 bg-white px-4 py-5">
+    <header className="flex text-gray-900 justify-between items-center border-b border-gray-300 bg-white  px-4 py-3">
       <div>GCB Pharmacy</div>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center  gap-2">
         <button
           onClick={onSync}
-          className="mt-auto flex bg-green-300 items-center gap-2 py-2 px-6 rounded hover:bg-green-500 hover:scale-105 transition"
+          className="mt-auto flex bg-orange-300 items-center gap-2 py-2 px-4 rounded hover:bg-orange-500 hover:scale-105 transition"
         >
           <ArrowPathIcon className="w-5 h-5" />
         </button>
         <button
           onClick={onLogout}
-          className="mt-auto flex bg-blue-300 items-center gap-2 py-2 px-6 rounded hover:bg-blue-500 hover:scale-105 transition"
+          className="mt-auto flex bg-green-300 items-center gap-2 py-2 px-4 rounded hover:bg-green-500 hover:scale-105 transition"
         >
           <ArrowLeftStartOnRectangleIcon className="w-5 h-5" />
         </button>
         <button
           onClick={onExit}
-          className="mt-auto flex bg-red-400 items-center gap-2 py-2 px-6 rounded hover:bg-red-500 hover:scale-105 transition"
+          className="mt-auto flex bg-red-400 items-center gap-2 py-2 px-4 rounded hover:bg-red-500 hover:scale-105 transition"
         >
           <PowerIcon className="w-5 h-5" />
         </button>
